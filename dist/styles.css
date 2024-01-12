@@ -1,0 +1,508 @@
+@font-face {
+  font-family: "RationalTWDisplay";
+  src: url("./fonts/RationalTWDisplay.eot");
+  src: url("./fonts/RationalTWDisplay.eot?#iefix") format("embedded-opentype"), url("./fonts/RationalTWDisplay.woff2") format("woff2"), url("./fonts/RationalTWDisplay.woff") format("woff"), url("./fonts/RationalTWDisplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.gamepad-button {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-style: initial;
+  vertical-align: top;
+  filter: drop-shadow(0 2px 2px black);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+.gamepad-button--size-small {
+  zoom: 0.75;
+}
+.gamepad-button--size-large {
+  zoom: 2;
+}
+.gamepad-button-wrapper {
+  display: inline-block;
+  height: 24px;
+  vertical-align: middle;
+}
+.gamepad-button-wrapper:has(.gamepad-button--debug) {
+  box-shadow: 0 0 0 1px red;
+}
+.gamepad-button--arrow-left, .gamepad-button--arrow-up, .gamepad-button--arrow-down, .gamepad-button--arrow-right {
+  background-image: linear-gradient(#504f51, #3C3D3F);
+  position: relative;
+  outline: 0;
+  user-select: none;
+  top: 2px;
+  width: 16px;
+  height: 20px;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  text-indent: -9999px;
+}
+.gamepad-button--arrow-left:after, .gamepad-button--arrow-up:after, .gamepad-button--arrow-down:after, .gamepad-button--arrow-right:after {
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 10px;
+}
+.gamepad-button--arrow-left {
+  margin-left: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-image: linear-gradient(to right, #504f51, #3C3D3F);
+}
+.gamepad-button--arrow-left:after {
+  right: 100%;
+  top: 50%;
+  border-right-color: #504f51;
+  margin-top: -10px;
+}
+.gamepad-button--arrow-right {
+  margin-right: 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-image: linear-gradient(to left, #504f51, #3C3D3F);
+}
+.gamepad-button--arrow-right:after {
+  left: 100%;
+  top: 50%;
+  border-left-color: #504f51;
+  margin-top: -10px;
+}
+.gamepad-button--arrow-up {
+  top: 11px;
+  width: 20px;
+  height: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: none;
+}
+.gamepad-button--arrow-up:after {
+  bottom: 100%;
+  left: 50%;
+  border-bottom-color: #504f51;
+  margin-left: -10px;
+}
+.gamepad-button--arrow-down {
+  top: 2px;
+  width: 20px;
+  height: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.gamepad-button--arrow-down:after {
+  top: 100%;
+  left: 50%;
+  border-top-color: #3C3D3F;
+  margin-left: -10px;
+}
+
+.gamepad-button-nintendo:before, .gamepad-button-nintendo:after {
+  content: "";
+  position: absolute;
+  text-indent: initial;
+  text-align: center;
+}
+.gamepad-button-nintendo--a, .gamepad-button-nintendo--b, .gamepad-button-nintendo--x, .gamepad-button-nintendo--y, .gamepad-button-nintendo--zl, .gamepad-button-nintendo--zr, .gamepad-button-nintendo--l, .gamepad-button-nintendo--r, .gamepad-button-nintendo--start, .gamepad-button-nintendo--select {
+  background-image: linear-gradient(#5f5e60, #3C3D3F);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+.gamepad-button-nintendo--a, .gamepad-button-nintendo--b, .gamepad-button-nintendo--x, .gamepad-button-nintendo--y, .gamepad-button-nintendo--zl, .gamepad-button-nintendo--zr, .gamepad-button-nintendo--l, .gamepad-button-nintendo--r {
+  font-family: "RationalTWDisplay";
+  font-style: normal;
+}
+.gamepad-button-nintendo--a, .gamepad-button-nintendo--b, .gamepad-button-nintendo--x, .gamepad-button-nintendo--y {
+  font-family: Roboto, "Open sans", Helvetica, Arial;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  vertical-align: top;
+  padding: 0;
+  transition: all 0.1s ease;
+  text-shadow: 0 0 0.3em #302800;
+}
+.gamepad-button-nintendo--zl, .gamepad-button-nintendo--zr {
+  border-radius: 5px;
+  position: relative;
+  height: 21px;
+  width: 34px;
+  top: 2px;
+  user-select: none;
+  text-indent: -9999px;
+}
+.gamepad-button-nintendo--zl::after, .gamepad-button-nintendo--zr::after {
+  font-size: 12px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-nintendo--zl::after {
+  content: "ZL";
+}
+.gamepad-button-nintendo--zr::after {
+  content: "ZR";
+}
+.gamepad-button-nintendo--l, .gamepad-button-nintendo--r {
+  position: relative;
+  top: 2px;
+  border-radius: 5px 5px 50% 50%;
+  height: 21px;
+  width: 32px;
+  user-select: none;
+  text-indent: -9999px;
+}
+.gamepad-button-nintendo--l::after, .gamepad-button-nintendo--r::after {
+  font-size: 12px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-nintendo--l::after {
+  content: "L";
+}
+.gamepad-button-nintendo--r::after {
+  content: "R";
+}
+.gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--start, .gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--select {
+  margin-top: 1px;
+  margin-left: 5px;
+  margin-right: 7px;
+  height: 7px;
+  border-radius: 4px;
+  text-indent: -9999px;
+}
+.gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--start::before, .gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--select::before {
+  font-size: 11px;
+  top: 7px;
+}
+.gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--start::before {
+  content: "START";
+  left: -3px;
+}
+.gamepad-button-nintendo--variant-gbc.gamepad-button-nintendo--select::before {
+  content: "SELECT";
+  left: -5px;
+}
+
+.gamepad-button-playstation {
+  text-indent: -9999px;
+}
+.gamepad-button-playstation:before, .gamepad-button-playstation:after {
+  content: "";
+  position: absolute;
+  text-indent: initial;
+  text-align: center;
+}
+.gamepad-button-playstation--square, .gamepad-button-playstation--circle, .gamepad-button-playstation--cross, .gamepad-button-playstation--triangle, .gamepad-button-playstation--l1, .gamepad-button-playstation--l2, .gamepad-button-playstation--l3, .gamepad-button-playstation--r1, .gamepad-button-playstation--r2, .gamepad-button-playstation--r3, .gamepad-button-playstation--select, .gamepad-button-playstation--ps {
+  background-image: linear-gradient(#5f5e60, #3C3D3F);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+}
+.gamepad-button-playstation--square, .gamepad-button-playstation--circle, .gamepad-button-playstation--cross, .gamepad-button-playstation--triangle, .gamepad-button-playstation--l1, .gamepad-button-playstation--l2, .gamepad-button-playstation--l3, .gamepad-button-playstation--r1, .gamepad-button-playstation--r2, .gamepad-button-playstation--r3 {
+  font-family: "RationalTWDisplay";
+  font-style: normal;
+}
+.gamepad-button-playstation--square, .gamepad-button-playstation--circle, .gamepad-button-playstation--cross, .gamepad-button-playstation--triangle, .gamepad-button-playstation--ps {
+  border-radius: 50px;
+  position: relative;
+  will-change: box-shadow;
+  outline: 0;
+  user-select: none;
+}
+.gamepad-button-playstation--square:before {
+  border: 2px solid #D592BD;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.gamepad-button-playstation--circle:before {
+  border: 2px solid #E94B0E;
+  border-radius: 50px;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.gamepad-button-playstation--cross:before {
+  border: 1px solid #9DA5D5;
+  background: #9DA5D5;
+  top: 11px;
+  left: 3px;
+  right: 3px;
+  transform: rotate(45deg);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.gamepad-button-playstation--cross:after {
+  border: 1px solid #9DA5D5;
+  background: #9DA5D5;
+  top: 11px;
+  left: 3px;
+  right: 3px;
+  transform: rotate(135deg);
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+.gamepad-button-playstation--triangle:before {
+  top: 3px;
+  bottom: 0;
+  left: 3px;
+  transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 9px;
+  border-left-width: 9px;
+  border-bottom: 15px solid #20AF93;
+}
+.gamepad-button-playstation--triangle:after {
+  top: 7px;
+  bottom: 0;
+  left: 6px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-bottom: 9px solid #47484A;
+}
+.gamepad-button-playstation--l1, .gamepad-button-playstation--r1 {
+  border-radius: 5px;
+  position: relative;
+  height: 21px;
+  width: 34px;
+  top: 2px;
+}
+.gamepad-button-playstation--l1::after, .gamepad-button-playstation--r1::after {
+  font-size: 12px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-playstation--l1::after {
+  content: "L1";
+}
+.gamepad-button-playstation--r1::after {
+  content: "R1";
+}
+.gamepad-button-playstation--l2, .gamepad-button-playstation--r2 {
+  position: relative;
+  top: 2px;
+  border-radius: 5px 5px 50% 50%;
+  height: 21px;
+  width: 32px;
+}
+.gamepad-button-playstation--l2::after, .gamepad-button-playstation--r2::after {
+  font-size: 12px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-playstation--l2::after {
+  content: "L2";
+}
+.gamepad-button-playstation--r2::after {
+  content: "R2";
+}
+.gamepad-button-playstation--l3, .gamepad-button-playstation--r3 {
+  border-radius: 50px;
+  padding: 4px;
+  margin-top: -4px;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+}
+.gamepad-button-playstation--l3::after, .gamepad-button-playstation--r3::after {
+  font-size: 11px;
+  top: 5px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-playstation--l3::after {
+  content: "L3";
+}
+.gamepad-button-playstation--r3::after {
+  content: "R3";
+}
+.gamepad-button-playstation--start {
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 24px;
+  border-color: transparent transparent transparent #3C3D3F;
+  margin-top: -4px;
+  margin-left: 3px;
+  margin-right: -21px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.gamepad-button-playstation--start::before {
+  content: "START";
+  font-size: 11px;
+  top: 11px;
+  left: -29px;
+}
+.gamepad-button-playstation--select {
+  margin-left: 6px;
+  margin-right: 7px;
+  height: 13px;
+  border-radius: 4px;
+}
+.gamepad-button-playstation--select::before {
+  content: "SELECT";
+  font-size: 11px;
+  top: 17px;
+  left: -6px;
+}
+.gamepad-button-playstation--ps::after {
+  background-image: url("./icons/ps.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 72%;
+  height: 68%;
+  top: 16%;
+  left: 16%;
+}
+
+.gamepad-button-xbox:before, .gamepad-button-xbox:after {
+  content: "";
+  position: absolute;
+  text-indent: initial;
+  text-align: center;
+}
+.gamepad-button-xbox--lt, .gamepad-button-xbox--lb, .gamepad-button-xbox--rt, .gamepad-button-xbox--rb, .gamepad-button-xbox--l3, .gamepad-button-xbox--r3 {
+  background-image: linear-gradient(#5f5e60, #3C3D3F);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  font-family: "RationalTWDisplay";
+  font-style: normal;
+}
+.gamepad-button-xbox--a, .gamepad-button-xbox--b, .gamepad-button-xbox--x, .gamepad-button-xbox--y {
+  font-family: Roboto, "Open sans", Helvetica, Arial;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(#5f5e60, #3C3D3F);
+  border-radius: 100%;
+  padding: 0;
+  transition: all 0.1s ease;
+}
+.gamepad-button-xbox--a {
+  color: #a3e82d;
+  text-shadow: 0 0 0.3em #0d1402;
+}
+.gamepad-button-xbox--a.gamepad-button-xbox--variant-360 {
+  background: linear-gradient(145deg, #6a9e11 0%, #98e318 80%);
+  box-shadow: 0 0 0.1em 0.1em rgba(163, 232, 45, 0.2), inset 0 0 0.1em 0.1em rgba(203, 242, 137, 0.6);
+}
+.gamepad-button-xbox--b {
+  color: #ff613e;
+  text-shadow: 0 0 0.3em #150400;
+  text-indent: 0.05em;
+}
+.gamepad-button-xbox--b.gamepad-button-xbox--variant-360 {
+  background: linear-gradient(145deg, #ae2200 0%, #fb3100 80%);
+  box-shadow: 0 0 0.1em 0.1em rgba(255, 67, 21, 0.2), inset 0 0 0.1em 0.1em rgba(255, 149, 123, 0.6);
+}
+.gamepad-button-xbox--x {
+  color: #1d9aff;
+  text-shadow: 0 0 0.3em #00101d;
+}
+.gamepad-button-xbox--x.gamepad-button-xbox--variant-360 {
+  background: linear-gradient(145deg, #0065b6 0%, #048fff 80%);
+  box-shadow: 0 0 0.1em 0.1em rgba(29, 154, 255, 0.2), inset 0 0 0.1em 0.1em rgba(131, 200, 255, 0.6);
+}
+.gamepad-button-xbox--y {
+  color: #ffde30;
+  text-shadow: 0 0 0.3em #302800;
+}
+.gamepad-button-xbox--y.gamepad-button-xbox--variant-360 {
+  background: linear-gradient(145deg, #c9a900 0%, #ffda17 80%);
+  box-shadow: 0 0 0.1em 0.1em rgba(255, 222, 48, 0.2), inset 0 0 0.1em 0.1em rgba(255, 238, 150, 0.6);
+}
+.gamepad-button-xbox--lb, .gamepad-button-xbox--rb, .gamepad-button-xbox--lt, .gamepad-button-xbox--rt {
+  border-radius: 5px;
+  position: relative;
+  will-change: box-shadow;
+  top: 2px;
+  user-select: none;
+  text-indent: -9999px;
+}
+.gamepad-button-xbox--lb::after, .gamepad-button-xbox--rb::after, .gamepad-button-xbox--lt::after, .gamepad-button-xbox--rt::after {
+  font-size: 11px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-xbox--lb, .gamepad-button-xbox--rb {
+  height: 21px;
+  width: 34px;
+  top: 2px;
+}
+.gamepad-button-xbox--lb::after, .gamepad-button-xbox--rb::after {
+  font-size: 12px;
+  top: -1px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-xbox--lb::after {
+  content: "LB";
+}
+.gamepad-button-xbox--rb::after {
+  content: "RB";
+}
+.gamepad-button-xbox--lt, .gamepad-button-xbox--rt {
+  border-radius: 5px 5px 50% 50%;
+  height: 21px;
+  width: 32px;
+}
+.gamepad-button-xbox--lt::after {
+  content: "LT";
+}
+.gamepad-button-xbox--rt::after {
+  content: "RT";
+}
+.gamepad-button-xbox--l3, .gamepad-button-xbox--r3 {
+  border-radius: 50px;
+  padding: 4px;
+  margin-top: -4px;
+  background-image: linear-gradient(#5f5e60, #3C3D3F);
+  position: relative;
+  height: 24px;
+  line-height: 24px;
+  width: 24px;
+  text-indent: -9999px;
+}
+.gamepad-button-xbox--l3::after, .gamepad-button-xbox--r3::after {
+  font-size: 11px;
+  top: 5px;
+  left: 0;
+  right: 0;
+}
+.gamepad-button-xbox--l3::after {
+  content: "L3";
+}
+.gamepad-button-xbox--r3::after {
+  content: "R3";
+}
+
+/*# sourceMappingURL=styles.css.map */
