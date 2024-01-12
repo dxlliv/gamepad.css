@@ -1,0 +1,49 @@
+{
+  "name": "gamepad.css",
+  "description": "CSS buttons of gaming consoles",
+  "version": "0.0.2",
+  "private": true,
+  "author": {
+    "name": "Diego Villa",
+    "url": "https://github.com/dxlliv"
+  },
+  "license": "MIT",
+  "homepage": "https://dxlliv.github.io/Gamepad.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxlliv/Gamepad.css.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "BASE_PATH=/Gamepad.css/stories/ storybook build --output-dir docs/stories",
+    "build-css": "sass ./src/assets/Gamepad.scss:./dist/styles.css && sass ./src/assets/Gamepad.scss:./dist/styles.min.css --style compressed && cp -r ./src/assets/fonts ./dist/ && cp -r ./public/icons ./dist/"
+  },
+  "devDependencies": {
+    "@storybook/addon-backgrounds": "^7.6.7",
+    "@storybook/addon-essentials": "^7.6.7",
+    "@storybook/addon-interactions": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/blocks": "^7.6.7",
+    "@storybook/test": "^7.6.7",
+    "@storybook/vue3": "^7.6.7",
+    "@storybook/vue3-vite": "^7.6.7",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "pinia": "^2.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.7",
+    "storybook": "^7.6.7",
+    "typescript": "*",
+    "vite": "^5.0.8",
+    "vue": "^3.3.11",
+    "vue-tsc": "^1.8.27",
+    "vue3-highlightjs": "^1.0.5"
+  },
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+  }
+}

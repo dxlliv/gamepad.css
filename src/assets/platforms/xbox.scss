@@ -1,0 +1,153 @@
+.gamepad-button {
+  &-xbox {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      text-indent: initial;
+      text-align: center;
+    }
+
+    &--lt, &--lb, &--rt, &--rb, &--l3, &--r3 {
+      background-image: linear-gradient(#5f5e60, #3C3D3F);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      font-family: 'RationalTWDisplay';
+      font-style: normal;
+    }
+
+    &--a, &--b, &--x, &--y {
+      font-family: Roboto, "Open sans", Helvetica, Arial;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      background-image: linear-gradient(#5f5e60, #3C3D3F);
+      border-radius: 100%;
+      padding: 0;
+      transition: all 0.1s ease;
+    }
+
+    &--a {
+      color: #a3e82d;
+      text-shadow: 0 0 0.3em #0d1402;
+
+      &.gamepad-button-xbox--variant-360 {
+        background: linear-gradient(145deg, #6a9e11 0%, #98e318 80%);
+        box-shadow: 0 0 0.1em 0.1em rgba(163, 232, 45, 0.2),inset 0 0 0.1em 0.1em rgba(203, 242, 137, 0.6);
+      }
+    }
+
+    &--b {
+      color: #ff613e;
+      text-shadow: 0 0 0.3em #150400;
+      text-indent: 0.05em;
+
+      &.gamepad-button-xbox--variant-360 {
+        background: linear-gradient(145deg, #ae2200 0%, #fb3100 80%);
+        box-shadow: 0 0 0.1em 0.1em rgba(255, 67, 21, 0.2), inset 0 0 0.1em 0.1em rgba(255, 149, 123, 0.6);
+      }
+    }
+
+    &--x {
+      color: #1d9aff;
+      text-shadow: 0 0 0.3em #00101d;
+
+      &.gamepad-button-xbox--variant-360 {
+        background: linear-gradient(145deg, #0065b6 0%, #048fff 80%);
+        box-shadow: 0 0 0.1em 0.1em rgba(29, 154, 255, 0.2), inset 0 0 0.1em 0.1em rgba(131, 200, 255, 0.6);
+      }
+    }
+
+    &--y {
+      color: #ffde30;
+      text-shadow: 0 0 0.3em #302800;
+
+      &.gamepad-button-xbox--variant-360 {
+        background: linear-gradient(145deg, #c9a900 0%, #ffda17 80%);
+        box-shadow: 0 0 0.1em 0.1em rgba(255, 222, 48, 0.2), inset 0 0 0.1em 0.1em rgba(255, 238, 150, 0.6);
+      }
+    }
+
+    &--lb, &--rb, &--lt, &--rt {
+      border-radius: 5px;
+      position: relative;
+      will-change: box-shadow;
+      top: 2px;
+      user-select: none;
+      text-indent: -9999px;
+
+      &::after {
+        font-size: 11px;
+        top: -1px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--lb, &--rb {
+      height: 21px;
+      width: 34px;
+      top: 2px;
+
+      &::after {
+        font-size: 12px;
+        top: -1px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--lb::after {
+      content: "LB";
+    }
+
+    &--rb::after {
+      content: "RB";
+    }
+
+    &--lt, &--rt {
+      border-radius: 5px 5px 50% 50%;
+      height: 21px;
+      width: 32px;
+    }
+
+    &--lt::after {
+      content: 'LT';
+    }
+
+    &--rt::after {
+      content: 'RT';
+    }
+
+    &--l3, &--r3 {
+      border-radius: 50px;
+      padding: 4px;
+      margin-top: -4px;
+      background-image: linear-gradient(#5f5e60, #3C3D3F);
+      position: relative;
+      height: 24px;
+      line-height: 24px;
+      width: 24px;
+      text-indent: -9999px;
+
+      &::after {
+        font-size: 11px;
+        top: 5px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &--l3::after {
+      content: 'L3';
+    }
+
+    &--r3::after {
+      content: 'R3';
+    }
+  }
+}

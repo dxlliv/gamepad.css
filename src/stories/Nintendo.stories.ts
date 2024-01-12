@@ -1,0 +1,116 @@
+import {configPlatforms} from "@/config/configPlatforms";
+import GamepadButton from "@/components/GamepadButton.vue";
+
+export default {
+  title: 'Platform/Nintendo',
+  component: GamepadButton,
+  tags: ['autodocs'],
+  args: {
+    platform: 'nintendo',
+    button: '',
+  },
+  argTypes: {
+    button: {
+      control: {
+        type: 'select',
+      },
+      options: configPlatforms.nintendo.buttons
+    },
+    size: {
+      control: {
+        type: 'select',
+      },
+      options: ['small', 'medium', 'large'],
+    },
+  },
+};
+
+export const A = {
+  args: {
+    button: 'a',
+  },
+};
+
+export const B = {
+  args: {
+    button: 'b',
+  },
+};
+
+export const X = {
+  args: {
+    button: 'x',
+  },
+};
+
+export const Y = {
+  args: {
+    button: 'y',
+  },
+};
+
+export const Up = {
+  args: {
+    button: 'arrow-up',
+  },
+};
+
+export const Down = {
+  args: {
+    button: 'arrow-down',
+  },
+};
+
+export const Left = {
+  args: {
+    button: 'arrow-left',
+  },
+};
+
+export const Right = {
+  args: {
+    button: 'arrow-right',
+  },
+};
+
+export const ZL = {
+  name: "ZL",
+  args: {
+    button: 'zl',
+  },
+};
+
+export const ZR = {
+  name: "ZR",
+  args: {
+    button: 'zr',
+  },
+};
+
+export const L = {
+  name: "L",
+  args: {
+    button: 'l',
+  },
+};
+
+export const R = {
+  name: "R",
+  args: {
+    button: 'r',
+  },
+};
+
+export const Select = {
+  args: {
+    button: 'select',
+    variant: 'gbc'
+  },
+};
+
+export const Start = {
+  args: {
+    button: 'start',
+    variant: 'gbc'
+  },
+};
