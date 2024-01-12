@@ -1,0 +1,16 @@
+{
+	"name": "gamepad.css",
+	"description": "CSS buttons of gaming consoles",
+	"version": "0.0.2",
+	"author": {
+		"name": "Diego Villa",
+		"url": "https://github.com/dxlliv"
+	},
+	"license": "MIT",
+	"homepage": "https://dxlliv.github.io/Gamepad.css",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dxlliv/Gamepad.css.git"
+	},
+	"type": "module"
+}
