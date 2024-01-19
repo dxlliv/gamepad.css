@@ -13,8 +13,8 @@ export const configPlatforms: Platforms = {
             gbc: {
                 name: 'Game Boy Color',
                 buttons: {
-                    list: ['x', 'y', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],
-                    preview: ['x', 'y', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],
+                    list: ['a', 'b', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],
+                    preview: ['a', 'b', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],
                 },
             },
         }
