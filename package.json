@@ -45,5 +45,15 @@
   },
   "packageManager": "yarn@4.0.2",
   "dependencies": {
-  }
+  },
+  "keywords": [
+    "joystick",
+    "css",
+    "gamepad",
+    "buttons",
+    "nintendo",
+    "switch",
+    "playstation",
+    "xbox"
+  ]
 }
