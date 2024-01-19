@@ -25,7 +25,7 @@ const emit = defineEmits(['reset'])
 
 <style scoped lang="scss">
 header {
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 
   h1 {
     cursor: pointer;
