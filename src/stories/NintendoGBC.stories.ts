@@ -2,11 +2,12 @@ import {configPlatforms} from "@/config/configPlatforms";
 import GamepadButton from "@/components/GamepadButton.vue";
 
 export default {
-  title: 'Platform/Nintendo',
+  title: 'Platform/Nintendo/Game Boy Color',
   component: GamepadButton,
   tags: ['autodocs'],
   args: {
     platform: 'nintendo',
+    variant: 'gbc',
     button: '',
   },
   argTypes: {
@@ -14,7 +15,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: configPlatforms.nintendo.buttons
+        options: configPlatforms.nintendo.consoles.gbc.buttons
     },
     size: {
       control: {
@@ -34,18 +35,6 @@ export const A = {
 export const B = {
   args: {
     button: 'b',
-  },
-};
-
-export const X = {
-  args: {
-    button: 'x',
-  },
-};
-
-export const Y = {
-  args: {
-    button: 'y',
   },
 };
 
@@ -70,34 +59,6 @@ export const Left = {
 export const Right = {
   args: {
     button: 'arrow-right',
-  },
-};
-
-export const ZL = {
-  name: "ZL",
-  args: {
-    button: 'zl',
-  },
-};
-
-export const ZR = {
-  name: "ZR",
-  args: {
-    button: 'zr',
-  },
-};
-
-export const L = {
-  name: "L",
-  args: {
-    button: 'l',
-  },
-};
-
-export const R = {
-  name: "R",
-  args: {
-    button: 'r',
   },
 };
 
