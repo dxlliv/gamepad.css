@@ -2,11 +2,12 @@ import {configPlatforms} from "@/config/configPlatforms";
 import GamepadButton from "@/components/GamepadButton.vue";
 
 export default {
-  title: 'Platform/Xbox',
+  title: 'Platform/Xbox/One',
   component: GamepadButton,
   tags: ['autodocs'],
   args: {
     platform: 'xbox',
+    variant: 'one',
     button: '',
   },
   argTypes: {
