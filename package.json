@@ -1,7 +1,7 @@
 {
   "name": "gamepad.css",
   "description": "CSS gamepad buttons of gaming consoles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "author": {
     "name": "Diego Villa",
