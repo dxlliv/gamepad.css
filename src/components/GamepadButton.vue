@@ -27,7 +27,8 @@ const classes = computed(() => {
     classList.push(`gamepad-button--size-${props.size}`)
   }
 
-  if (props.debug) {
+  //if (props.debug) {
+  if (1 === 1) {
     classList.push('gamepad-button--debug')
   }
 

@@ -1,6 +1,6 @@
 .gamepad-button {
   &-nintendo {
-    @include gamepad-generic-label;
+    @include gamepad-generic-pseudo-label;
 
     &--a, &--b, &--x, &--y {
       @include gamepad-generic-button-background;
@@ -72,7 +72,7 @@
       &.gamepad-button-nintendo {
         &--start, &--select {
           @include gamepad-generic-button-background;
-          @include gamepad-generic-selects;
+          @include gamepad-generic-select;
         }
 
         &--start::before {

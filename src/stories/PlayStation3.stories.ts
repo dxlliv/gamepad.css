@@ -2,9 +2,7 @@ import {configPlatforms} from "@/config/configPlatforms";
 import GamepadButton from "@/components/GamepadButton.vue";
 
 export default {
-  title: 'Platform/PlayStation',
-  subtitle: 'asdasd',
-  description: 'asdasd',
+  title: 'Platform/PlayStation/PS3',
   component: GamepadButton,
   tags: ['autodocs'],
   args: {
@@ -126,5 +124,12 @@ export const Select = {
 export const Start = {
     args: {
         button: 'start',
+    },
+};
+
+
+export const PS = {
+    args: {
+        button: 'ps',
     },
 };

@@ -2,32 +2,16 @@
   &-playstation {
     text-indent: -9999px;
 
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      text-indent: initial;
-      text-align: center;
-    }
+    @include gamepad-generic-pseudo-label;
 
     &--square, &--circle, &--cross, &--triangle,
     &--l1, &--l2, &--l3, &--r1, &--r2, &--r3,
     &--select, &--ps {
-      background-image: var(--gamepad-button-background);
-      box-shadow: var(--gamepad-button-box-shadow-top);
-    }
-
-    &--square, &--circle, &--cross, &--triangle,
-    &--l1, &--l2, &--l3, &--r1, &--r2, &--r3 {
-      font-family: 'RationalTWDisplay';
-      font-style: normal;
+      @include gamepad-generic-button-background;
     }
 
     &--square, &--circle, &--cross, &--triangle, &--ps {
-      border-radius: 50px;
-      position: relative;
-      will-change: box-shadow;
-      outline: 0;
-      user-select: none;
+      @include gamepad-generic-button-rounded;
     }
 
     &--square {
@@ -37,7 +21,6 @@
         bottom: 4px;
         left: 4px;
         right: 4px;
-        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       }
     }
 
@@ -49,7 +32,6 @@
         bottom: 3px;
         left: 3px;
         right: 3px;
-        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       }
     }
 
@@ -61,7 +43,6 @@
         left: 3px;
         right: 3px;
         transform: rotate(45deg);
-        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       }
 
       &:after {
@@ -71,7 +52,6 @@
         left: 3px;
         right: 3px;
         transform: rotate(135deg);
-        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
       }
     }
 
@@ -104,18 +84,8 @@
     }
 
     &--l1, &--r1 {
-      border-radius: 5px;
-      position: relative;
-      height: 21px;
-      width: 34px;
-      top: 2px;
-
-      &::after {
-        font-size: 12px;
-        top: -1px;
-        left: 0;
-        right: 0;
-      }
+      @include gamepad-generic-trigger;
+      @include gamepad-generic-trigger-primary;
     }
 
     &--l1::after {
@@ -127,18 +97,8 @@
     }
 
     &--l2, &--r2 {
-      position: relative;
-      top: 2px;
-      border-radius: 5px 5px 50% 50%;
-      height: 21px;
-      width: 32px;
-
-      &::after {
-        font-size: 12px;
-        top: -1px;
-        left: 0;
-        right: 0;
-      }
+      @include gamepad-generic-trigger;
+      @include gamepad-generic-trigger-secondary;
     }
 
     &--l2::after {
@@ -150,18 +110,48 @@
     }
 
     &--l3, &--r3 {
-      border-radius: 50px;
-      padding: 4px;
-      margin-top: -4px;
-      height: 24px;
-      line-height: 24px;
-      width: 24px;
+      @include gamepad-generic-stick;
 
-      &::after {
-        font-size: 11px;
-        top: 5px;
-        left: 0;
-        right: 0;
+      &:after {
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        background-image:
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, transparent 1px, rgba(0, 0, 0, 0.15) 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+        background-position: 0 0, 0 1px, 0 2px, 0 3px, 0 4px, 0 5px, 0 6px, 0 7px,
+        0 8px, 0 9px, 0 10px, 0 11px, 0 12px, 0 13px, 0 14px, 0 15px, 0 16px,
+        0 17px, 0 18px, 0 19px, 0 20px, 0 21px, 0 22px, 0 23px, 0 24px,
+        0 25px, 0 26px, 0 27px, 0 28px, 0 29px;
+        background-repeat: repeat-x;
+        background-size: 2px 1px;
       }
     }
 
@@ -174,6 +164,7 @@
     }
 
     &--start {
+      width: 46px;
       height: 0;
       border-style: solid;
       border-width: 10px 0 10px 24px;
