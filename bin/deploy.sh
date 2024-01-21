@@ -9,7 +9,6 @@ yarn build-css
 
 git add .
 git commit -m "Update dist folder"
-git push
 
 rm -rf ./docs
 
