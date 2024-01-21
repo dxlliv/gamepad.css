@@ -7,9 +7,13 @@ Or at least, all major consoles. Inspired by [PSone.css](https://github.com/mica
 [Demo](https://dxlliv.github.io/Gamepad.css) - [Storybook](https://dxlliv.github.io/Gamepad.css/stories)
 
 ### Storybook stories 
-- [CSS Gamepad Buttons for Nintendo: GBC, Switch and other consoles](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-nintendo--docs)
-- [CSS Gamepad Buttons for Sony: PS1, PS2, PS3, PS4 and other consoles](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-playstation--docs)
-- [CSS Gamepad Buttons for Microsoft: Xbox 360, One and other consoles](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-xbox--docs)
+- [CSS Gamepad Buttons for Nintendo Game Boy Color](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-nintendo-game-boy-color--docs)
+- [CSS Gamepad Buttons for Nintendo Switch](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-nintendo-switch--docs)
+- [CSS Gamepad Buttons for Sony PlayStation 1](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-playstation-ps1--docs)
+- [CSS Gamepad Buttons for Sony PlayStation 2](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-playstation-ps2--docs)
+- [CSS Gamepad Buttons for Sony PlayStation 3](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-playstation-ps3--docs)
+- [CSS Gamepad Buttons for Microsoft Xbox 360](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-xbox-360--docs)
+- [CSS Gamepad Buttons for Microsoft Xbox One](https://dxlliv.github.io/Gamepad.css/stories/?path=/docs/platform-xbox-one--docs)
 
 
 ## Installation
