@@ -14,7 +14,7 @@ const classes = computed(() => {
   const classList = ['gamepad-button', `gamepad-button-${props.platform}`]
 
   if (props.button.startsWith('arrow')) {
-    classList.push(`gamepad-button--${props.button}`)
+    classList.push(`gamepad-button--arrow gamepad-button--${props.button}`)
   } else {
     classList.push(`gamepad-button-${props.platform}--${props.button}`)
   }

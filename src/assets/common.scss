@@ -1,15 +1,237 @@
-.gamepad-button {
+// generic arrow rules
+@mixin gamepad-generic-arrow-base {
+  background-image: linear-gradient(#504f51, #3C3D3F);
+  position: relative;
+  outline: 0;
+  user-select: none;
+  top: 2px;
+  width: 16px;
+  height: 20px;
+  box-shadow: var(--gamepad-button-box-shadow-top);
+  text-indent: -9999px;
+
+  &:after {
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-color: rgba(136, 183, 213, 0);
+    border-width: 10px;
+  }
+}
+@mixin gamepad-generic-arrow-base-left {
+  margin-left: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-image: linear-gradient(to right, #504f51, #3C3D3F);
+
+  &:after {
+    right: 100%;
+    top: 50%;
+    border-right-color: #504f51;
+    margin-top: -10px;
+  }
+}
+@mixin gamepad-generic-arrow-base-right {
+  margin-right: 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-image: linear-gradient(to left, #504f51, #3C3D3F);
+
+  &:after {
+    left: 100%;
+    top: 50%;
+    border-left-color: #504f51;
+    margin-top: -10px;
+  }
+}
+@mixin gamepad-generic-arrow-base-up {
+  top: 11px;
+  width: 20px;
+  height: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: none;
+
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    border-bottom-color: #504f51;
+    margin-left: -10px;
+  }
+}
+@mixin gamepad-generic-arrow-base-down {
+  top: 2px;
+  width: 20px;
+  height: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  &:after {
+    top: 100%;
+    left: 50%;
+    border-top-color: #3C3D3F;
+    margin-left: -10px;
+  }
+}
+
+// generic arrow rules (rounded)
+@mixin gamepad-generic-arrow-rounded {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  top: inherit !important;
+  margin: 0 !important;
+
+  &:after {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    bottom: initial !important;
+    right: initial !important;
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.05));
+
+    transform: translate(-50%, -50%);
+    z-index: 99;
+  }
+}
+@mixin gamepad-generic-arrow-rounded-up {
+  &:after {
+    border-width: 0 5px 8px 5px;
+    border-bottom-color: #333;
+    top: 11px;
+  }
+}
+@mixin gamepad-generic-arrow-rounded-down {
+  &:after {
+    border-width: 8px 5px 0 5px;
+    border-top-color: #333;
+    top: 12px;
+  }
+}
+@mixin gamepad-generic-arrow-rounded-left {
+  &:after {
+    border-width: 5px 8px 5px 0;
+    border-right-color: #333;
+    margin-left: -1px;
+  }
+}
+@mixin gamepad-generic-arrow-rounded-right {
+  &:after {
+    border-width: 5px 0 5px 8px;
+    border-left-color: #333;
+    margin-left: 1px;
+  }
+}
+
+// generic arrow set
+@mixin gamepad-generic-arrow-set {
+  @include gamepad-generic-arrow-base;
+
+  &-left { @include gamepad-generic-arrow-base-left; }
+  &-right { @include gamepad-generic-arrow-base-right; }
+  &-up { @include gamepad-generic-arrow-base-up; }
+  &-down { @include gamepad-generic-arrow-base-down; }
+}
+
+// generic button
+@mixin gamepad-generic-button {
+  position: relative;
   display: inline-block;
   width: 24px;
   height: 24px;
   line-height: 24px;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  //font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Open sans", Helvetica, Arial;
   font-style: initial;
+  font-size: 20px;
+  font-weight: 400;
+  filter: var(--gamepad-button-drop-shadow);
+  text-shadow: 0 0 0.3em #302800;
+  text-transform: uppercase;
+  text-align: center;
   vertical-align: top;
-  filter: drop-shadow(0 2px 2px black);
+  box-sizing: border-box;
   color: white;
   cursor: pointer;
   user-select: none;
+  transition: all 0.1s ease;
+}
+@mixin gamepad-generic-button-rounded {
+  border-radius: 100%;
+}
+@mixin gamepad-generic-button-background {
+  background-image: var(--gamepad-button-background);
+  box-shadow: var(--gamepad-button-box-shadow-top);
+}
+@mixin gamepad-generic-trigger {
+  font-family: 'RationalTWDisplay';
+  font-style: normal;
+  text-indent: -9999px;
+}
+@mixin gamepad-generic-trigger-primary {
+  border-radius: 5px;
+  height: 21px;
+  width: 34px;
+  top: 2px;
+
+  &::after {
+    font-size: 12px;
+    top: -1px;
+    left: 0;
+    right: 0;
+  }
+}
+@mixin gamepad-generic-trigger-secondary {
+  position: relative;
+  top: 2px;
+  border-radius: 5px 5px 50% 50%;
+  height: 21px;
+  width: 32px;
+  user-select: none;
+  text-indent: -9999px;
+
+  &::after {
+    font-size: 12px;
+    top: -1px;
+    left: 0;
+    right: 0;
+  }
+}
+@mixin gamepad-generic-selects {
+  margin-top: 1px;
+  margin-left: 5px;
+  margin-right: 7px;
+  height: 7px;
+  border-radius: 4px;
+  text-indent: -9999px;
+
+  &::before {
+    font-size: 11px;
+    top: 7px;
+  }
+}
+@mixin gamepad-generic-label {
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    text-indent: initial;
+    text-align: center;
+  }
+}
+
+.gamepad-button {
+  --gamepad-button-background: linear-gradient(#5f5e60, #3C3D3F);
+  --gamepad-button-box-shadow-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --gamepad-button-drop-shadow: drop-shadow(0 2px 2px black);
+
+  @include gamepad-generic-button;
 
   &--size-small {
     zoom: 0.75;
@@ -29,87 +251,7 @@
     }
   }
 
-  &--arrow-left,
-  &--arrow-up,
-  &--arrow-down,
-  &--arrow-right {
-    background-image: linear-gradient(#504f51, #3C3D3F);
-    position: relative;
-    outline: 0;
-    user-select: none;
-    top: 2px;
-    width: 16px;
-    height: 20px;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-    text-indent: -9999px;
-
-    &:after {
-      border: solid transparent;
-      content: "";
-      height: 0;
-      width: 0;
-      position: absolute;
-      border-color: rgba(136, 183, 213, 0);
-      border-width: 10px;
-    }
-  }
-
-  &--arrow-left {
-    margin-left: 10px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background-image: linear-gradient(to right, #504f51, #3C3D3F);
-
-    &:after {
-      right: 100%;
-      top: 50%;
-      border-right-color: #504f51;
-      margin-top: -10px;
-    }
-  }
-
-  &--arrow-right {
-    margin-right: 10px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    background-image: linear-gradient(to left, #504f51, #3C3D3F);
-
-    &:after {
-      left: 100%;
-      top: 50%;
-      border-left-color: #504f51;
-      margin-top: -10px;
-    }
-  }
-
-  &--arrow-up {
-    top: 11px;
-    width: 20px;
-    height: 12px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    box-shadow: none;
-
-    &:after {
-      bottom: 100%;
-      left: 50%;
-      border-bottom-color: #504f51;
-      margin-left: -10px;
-    }
-  }
-
-  &--arrow-down {
-    top: 2px;
-    width: 20px;
-    height: 12px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-
-    &:after {
-      top: 100%;
-      left: 50%;
-      border-top-color: #3C3D3F;
-      margin-left: -10px;
-    }
+  &--arrow {
+    @include gamepad-generic-arrow-set;
   }
 }
