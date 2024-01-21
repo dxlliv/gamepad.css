@@ -7,14 +7,6 @@ rm -rf ./dist
 
 yarn build-css
 
-git add .
-git commit -m "Update dist folder"
-
-rm -rf ./docs
-
-yarn build
-yarn build-storybook
-
 cp ./README.md ./dist/README.md
 
 jsonFile=package.json;
@@ -32,6 +24,15 @@ delete data.packageManager
 console.log(JSON.stringify(data, null, "\t"));
 
 EOF
+
+git add .
+git commit -m "Update dist folder"
+
+rm -rf ./docs
+
+yarn build
+yarn build-storybook
+touch docs/.nojekyll
 
 # commit, then deploy on GitHub Pages
 git add .
