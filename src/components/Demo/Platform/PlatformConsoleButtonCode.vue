@@ -7,25 +7,70 @@ defineProps<{
 </script>
 
 <template>
-  <div class="gamepad-platform-viewew__button-code">
-    <h6>Gamepad button</h6>
-    <Code :source="code" highlight="html" />
+  <div class="gamepad-platform-viewer__button-code">
+    <div class="gamepad-platform-viewer__button-code__bg" v-html="code" />
+    <div class="gamepad-platform-viewer__button-code__container">
+      <div style="text-align: center;">
+        <div class="gamepad-platform-viewer__button-code__inner" v-html="code" />
+      </div>
+      <div>
+        <Code :source="code" highlight="html" />
+      </div>
+    </div>
   </div>
 </template>
 
-<style scoped>
-.gamepad-platform-viewew__button-code {
+<style scoped lang="scss">
+.gamepad-platform-viewer__button-code {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px;
-  backdrop-filter: blur(32px);
-  border-top: 1px solid var(--border-color);
-  text-align: left;
+  height: 107px;
+  background: black;
+  overflow: hidden;
 
-  h6 {
-    margin: 0 0 8px 0;
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scale(10);
+  }
+
+  &__container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(32px);
+    background: rgba(38, 38, 38, 0.92);
+    border-top: 1px solid var(--border-color);
+    text-align: left;
+    display: grid;
+    grid-template-columns: 106px calc(100% - 106px);
+
+    div {
+      align-self: center;
+    }
+
+    &__inner {
+      padding: 32px;
+    }
+
+    h6 {
+      margin: 0 0 8px 0;
+    }
+
+    pre {
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    :deep(.gamepad-button-wrapper) {
+      margin-top: -12px;
+      transform: scale(2);
+    }
   }
 }
 </style>
