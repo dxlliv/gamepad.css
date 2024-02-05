@@ -10,7 +10,7 @@ defineProps<{
   <div class="gamepad-platform-viewer__button-code">
     <div class="gamepad-platform-viewer__button-code__bg" v-html="code" />
     <div class="gamepad-platform-viewer__button-code__container">
-      <div style="text-align: center;">
+      <div>
         <div class="gamepad-platform-viewer__button-code__inner" v-html="code" />
       </div>
       <div>
@@ -26,7 +26,7 @@ defineProps<{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 107px;
+  height: 91px;
   background: black;
   overflow: hidden;
 
@@ -51,6 +51,10 @@ defineProps<{
 
     div {
       align-self: center;
+
+      &:first-child {
+        text-align: center;
+      }
     }
 
     &__inner {
@@ -65,6 +69,10 @@ defineProps<{
       border-top: 0;
       border-right: 0;
       border-bottom: 0;
+    }
+
+    :deep(code) {
+      overflow: hidden;
     }
 
     :deep(.gamepad-button-wrapper) {
