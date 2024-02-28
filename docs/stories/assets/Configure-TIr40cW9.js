@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-Lk3Vvm3M.js";import{M as i}from"./index-8OdQLRix.js";import{u as n}from"./index-VN0g5LUo.js";import"./iframe-HkL7l6Bg.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function s(e){return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Gamepad.css"}),`
+import{j as t}from"./jsx-runtime-1YIJZCSK.js";import{M as i}from"./index-2Jprnnrl.js";import{u as n}from"./index-D9oQwRY2.js";import"./iframe--MoMZmIy.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function s(e){return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Gamepad.css"}),`
 `,t.jsx("div",{className:"sb-container",children:t.jsx("iframe",{src:"https://dxlliv.github.io/Gamepad.css/"})}),`
 `,t.jsx("style",{children:`
     .sbdocs-wrapper {
