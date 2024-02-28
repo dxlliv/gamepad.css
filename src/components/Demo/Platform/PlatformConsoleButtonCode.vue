@@ -26,7 +26,7 @@ defineProps<{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 91px;
+  height: 92px;
   background: black;
   overflow: hidden;
 

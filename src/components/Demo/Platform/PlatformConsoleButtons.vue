@@ -50,5 +50,6 @@ h3 {
 
 .gamepad-button-wrapper {
   margin-right: 10px;
+  cursor: pointer;
 }
 </style>

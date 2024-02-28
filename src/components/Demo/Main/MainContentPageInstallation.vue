@@ -18,7 +18,7 @@ import Code from "@/components/Demo/Code.vue";
   />
   <br />
   <p>
-    Or import them directly from jsdelivr.net
+    You can also import styles directly from jsdelivr.net
   </p>
   <Code
       source='<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gamepad.css@latest/styles.min.css">'
