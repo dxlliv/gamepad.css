@@ -1,6 +1,6 @@
 import { themes } from '@storybook/theming';
 import DocumentationTemplate from './DocumentationTemplate.mdx';
-import "../src/assets/Gamepad.scss"
+import "../src/assets/gamepad.scss"
 
 /** @type { import('@storybook/vue3').Preview } */
 const preview = {

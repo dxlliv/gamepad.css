@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
 import './assets/demo.scss'
-import "@/assets/Gamepad.scss"
+import "@/assets/gamepad.scss"
 
 import App from './App.vue'
 import {plugins} from "@/plugins";
