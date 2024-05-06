@@ -30,6 +30,11 @@ function onLogoClick() {
     <MainNav />
     <MainContentPagePlatformViewer v-if="viewerPageStore.page === 'platforms'" />
     <MainContentPage v-else />
+
+    <div class="license">
+      Released under the MIT License.<br />
+      Copyright &copy; 2024 <a href="https://dxlliv.github.io" target="_blank">dxlliv</a>
+    </div>
   </main>
 </template>
 
@@ -46,6 +51,25 @@ main {
   border: 1px solid var(--demo-border-color);
   border-radius: 4px;
   margin-bottom: 16px;
+
+  div.license {
+    position: absolute;
+    bottom: -44px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem !important;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.1666666667em !important;
+    text-transform: uppercase !important;
+    opacity: 0.1;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }
 
 footer {
