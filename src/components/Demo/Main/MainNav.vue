@@ -67,8 +67,8 @@ function onPlatformClick(platformCode: string) {
 <style scoped lang="scss">
 nav {
   text-align: left;
-  background: rgba(255, 255, 255, 0.015);
-  border-right: 1px solid var(--border-color);
+  background: var(--demo-nav-color);
+  border-right: 1px solid var(--demo-border-color);
 
   ul {
     margin: 0;
@@ -97,9 +97,9 @@ nav {
   }
 
   hr {
-    background: var(--border-color);
-    height: 1px;
+    height: 0;
     border: 0;
+    border-top: 1px solid var(--demo-border-color);
     margin: 0;
   }
 

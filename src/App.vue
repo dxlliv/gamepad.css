@@ -35,6 +35,7 @@ function onLogoClick() {
 
 <style scoped lang="scss">
 main {
+  position: relative;
   display: grid;
   grid-template-columns: 30% 70%;
   width: 720px;
@@ -42,7 +43,7 @@ main {
   min-height: 500px;
   max-height: 500px;
 
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--demo-border-color);
   border-radius: 4px;
   margin-bottom: 16px;
 }

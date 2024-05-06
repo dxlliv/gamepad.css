@@ -11,10 +11,13 @@ const emit = defineEmits(['reset'])
     </p>
     <p>
       <a href="https://www.npmjs.com/package/gamepad.css" target="_blank">
-        <img src="https://img.shields.io/npm/v/gamepad.css?color=blue" alt="" />
+        <img src="https://img.shields.io/npm/v/gamepad.css?color=2f2f2f" alt="" />
       </a>
       <a href="https://www.npmjs.com/package/gamepad.css" target="_blank">
-        <img src="https://img.shields.io/npm/l/gamepad.css" alt="" />
+        <img src="https://img.shields.io/npm/dm/gamepad.css?color=2f2f2f" alt="" />
+      </a>
+      <a href="https://www.npmjs.com/package/gamepad.css" target="_blank">
+        <img src="https://img.shields.io/npm/l/gamepad.css?color=2f2f2f" alt="" />
       </a>
       <a href="https://github.com/dxlliv/gamepad.css" target="_blank">
         <img src="https://img.shields.io/github/stars/dxlliv/gamepad.css?style=social" alt="" />

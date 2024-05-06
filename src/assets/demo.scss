@@ -4,9 +4,10 @@
   font-weight: 400;
   color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  --border-color: #333;
+  --demo-background-color: #1f1f1f;
+  --demo-nav-color: rgba(255, 255, 255, 0.015);
+  --demo-border-color: #333;
 }
 
 ::selection {
@@ -20,6 +21,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   user-select: none;
+  background-color: var(--demo-background-color);
 }
 
 #app {

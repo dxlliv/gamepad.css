@@ -32,25 +32,33 @@ const buttons = computed(() => {
       </template>
     </h3>
 
-    <GamepadButton
-        v-for="button of buttons"
-        :key="button"
-        :button="button"
-        :platform="platform"
-        :variant="props.console"
-        clickable
-    />
+    <div>
+      <GamepadButton
+          v-for="button of buttons"
+          :key="button"
+          :button="button"
+          :platform="platform"
+          :variant="props.console"
+          clickable
+      />
+    </div>
   </div>
 </template>
 
-<style scoped>
-h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-}
+<style scoped lang="scss">
+.gamepad-platform-viewer__buttons {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
 
-.gamepad-button-wrapper {
-  margin-right: 10px;
-  cursor: pointer;
+  div {
+    padding-bottom: 3px;
+  }
+
+  .gamepad-button-wrapper {
+    margin-right: 10px;
+    cursor: pointer;
+  }
 }
 </style>

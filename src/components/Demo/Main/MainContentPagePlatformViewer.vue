@@ -4,7 +4,7 @@ import {useViewerPlatformStore} from "@/stores/storeViewerPlatform";
 import {useViewerButtonStore} from "@/stores/storeViewerButton";
 
 import PlatformConsoleButtons from "@/components/Demo/Platform/PlatformConsoleButtons.vue";
-import PlatformConsoleButtonCode from "@/components/Demo/Platform/PlatformConsoleButtonCode.vue";
+import PlatformConsoleButtonCodeViewer from "@/components/Demo/Platform/PlatformConsoleButtonCodeViewer.vue";
 
 const viewerPlatformStore = useViewerPlatformStore()
 const viewerButtonStore = useViewerButtonStore()
@@ -22,7 +22,7 @@ function onGamepadButtonClick(e: any) {
 </script>
 
 <template>
-  <div class="gamepad-platform-viewer">
+  <div :class="['gamepad-platform-viewer', {'gamepad-platform-viewer--code-viewer': viewerButtonStore.code}]">
     <template
         v-for="platformCode of Object.keys(viewerPlatformStore.platformsFiltered)"
         :key="platformCode"
@@ -39,21 +39,30 @@ function onGamepadButtonClick(e: any) {
       </section>
     </template>
 
-    <PlatformConsoleButtonCode
-        v-if="viewerButtonStore.code"
-        :code="viewerButtonStore.code"
-    />
   </div>
+
+  <PlatformConsoleButtonCodeViewer
+      v-if="viewerButtonStore.code"
+      :code="viewerButtonStore.code"
+  />
 </template>
 
 <style scoped lang="scss">
 div.gamepad-platform-viewer {
-  position: relative;
+  overflow-y: auto;
   height: 100%;
+
+  &--code-viewer {
+    max-height: 380px;
+  }
 
   section {
     text-align: left;
     padding: 16px;
+
+    &:not(:last-child) {
+      padding-bottom: 3px;
+    }
   }
 }
 </style>

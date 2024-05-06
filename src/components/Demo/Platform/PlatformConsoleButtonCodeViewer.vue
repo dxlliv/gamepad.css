@@ -26,7 +26,7 @@ defineProps<{
   bottom: 0;
   left: 0;
   right: 0;
-  height: 92px;
+  height: 120px;
   background: black;
   overflow: hidden;
 
@@ -37,28 +37,42 @@ defineProps<{
     transform: scale(10);
   }
 
+  &__inner {
+    position: relative;
+    display: grid;
+    align-items: center;
+    align-content: center;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0.5;
+      content: '';
+    }
+  }
+
   &__container {
+    display: grid;
+    grid-template-columns: 30% 70%;
     position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     backdrop-filter: blur(32px);
     background: rgba(38, 38, 38, 0.92);
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--demo-border-color);
     text-align: left;
-    display: grid;
-    grid-template-columns: 106px calc(100% - 106px);
 
     div {
       align-self: center;
 
       &:first-child {
         text-align: center;
+        height: 100%;
       }
-    }
-
-    &__inner {
-      padding: 32px;
     }
 
     h6 {
@@ -66,18 +80,24 @@ defineProps<{
     }
 
     pre {
-      border-top: 0;
-      border-right: 0;
-      border-bottom: 0;
+      border: 0;
+      background: none;
     }
 
     :deep(code) {
-      overflow: hidden;
+      padding: 0 !important;
+
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none
     }
 
     :deep(.gamepad-button-wrapper) {
-      margin-top: -12px;
+      width: 24px;
       transform: scale(2);
+      margin: 0 auto;
     }
   }
 }
