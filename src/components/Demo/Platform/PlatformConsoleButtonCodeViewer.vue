@@ -7,11 +7,11 @@ defineProps<{
 </script>
 
 <template>
-  <div class="gamepad-platform-viewer__button-code">
-    <div class="gamepad-platform-viewer__button-code__bg" v-html="code" />
-    <div class="gamepad-platform-viewer__button-code__container">
+  <div class="gamepad-platform-viewer__button-code-viewer">
+    <div class="gamepad-platform-viewer__button-code-viewer__bg" v-html="code" />
+    <div class="gamepad-platform-viewer__button-code-viewer__container">
       <div>
-        <div class="gamepad-platform-viewer__button-code__inner" v-html="code" />
+        <div class="gamepad-platform-viewer__button-code-viewer__inner" v-html="code" />
       </div>
       <div>
         <Code :source="code" highlight="html" />
@@ -21,7 +21,7 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-.gamepad-platform-viewer__button-code {
+.gamepad-platform-viewer__button-code-viewer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -85,7 +85,7 @@ defineProps<{
     }
 
     :deep(code) {
-      padding: 0 !important;
+      padding: 0 32px 0 0 !important;
 
       ::-webkit-scrollbar {
         width: 0;
