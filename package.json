@@ -8,10 +8,10 @@
     "url": "https://github.com/dxlliv"
   },
   "license": "MIT",
-  "homepage": "https://dxlliv.github.io/Gamepad.css",
+  "homepage": "https://dxlliv.github.io/gamepad.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dxlliv/Gamepad.css.git"
+    "url": "git+https://github.com/dxlliv/gamepad.css.git"
   },
   "type": "module",
   "scripts": {
@@ -19,8 +19,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "BASE_PATH=/Gamepad.css/stories/ storybook build --output-dir docs/stories",
-    "build-css": "sass ./src/assets/Gamepad.scss:./dist/styles.css && sass ./src/assets/Gamepad.scss:./dist/styles.min.css --style compressed && cp -r ./src/assets/fonts ./dist/ && cp -r ./public/icons ./dist/"
+    "build-storybook": "BASE_PATH=/gamepad.css/stories/ storybook build --output-dir docs/stories",
+    "build-css": "sass ./src/assets/gamepad.scss:./dist/styles.css && sass ./src/assets/Gamepad.scss:./dist/styles.min.css --style compressed && cp -r ./src/assets/fonts ./dist/ && cp -r ./public/icons ./dist/"
   },
   "devDependencies": {
     "@storybook/addon-backgrounds": "^7.6.7",

@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Gamepad.css/',
+  base: '/gamepad.css/',
   plugins: [vue()],
   build: {
     outDir: 'docs'
