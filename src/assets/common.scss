@@ -249,6 +249,10 @@
 
   @include gamepad-generic-button;
 
+  &--arrow {
+    @include gamepad-generic-arrow-set;
+  }
+
   &--size-small {
     zoom: 0.75;
   }
@@ -262,6 +266,7 @@
     height: 24px;
     vertical-align: middle;
 
+    // debug mode
     &:has(.gamepad-button--debug) {
       box-shadow: 0 0 0 1px red;
     }
@@ -279,9 +284,5 @@
         }
       }
     }
-  }
-
-  &--arrow {
-    @include gamepad-generic-arrow-set;
   }
 }
