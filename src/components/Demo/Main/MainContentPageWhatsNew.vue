@@ -1,15 +1,15 @@
 <script setup lang="ts">
 const changelog = [
   {
-    title: 'v0.0.1',
+    title: 'v0.0.4',
     changes: [
         'Make gamepad buttons clickable',
     ]
   },
   {
-    title: 'v0.0.1',
+    title: 'v0.0.3',
     changes: [
-        'Rewrite styles using some SCSS features',
+      'Rewrite styles using some SCSS features',
     ]
   },
   {
