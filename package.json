@@ -44,8 +44,6 @@
     "vue3-highlightjs": "^1.0.5"
   },
   "packageManager": "yarn@4.0.2",
-  "dependencies": {
-  },
   "keywords": [
     "css",
     "gamepad",
