@@ -38,6 +38,7 @@ const buttons = computed(() => {
         :button="button"
         :platform="platform"
         :variant="props.console"
+        clickable
     />
   </div>
 </template>

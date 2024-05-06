@@ -265,6 +265,20 @@
     &:has(.gamepad-button--debug) {
       box-shadow: 0 0 0 1px red;
     }
+
+    // clickable button
+    &:has(.gamepad-button--clickable) {
+      cursor: pointer;
+
+      &:active {
+        position: relative;
+        top: 1px;
+
+        > i {
+          filter: none;
+        }
+      }
+    }
   }
 
   &--arrow {

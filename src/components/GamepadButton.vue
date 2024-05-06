@@ -6,6 +6,7 @@ const props = defineProps<{
   button: string
   variant?: string
   size?: string
+  clickable?: boolean
   debug?: boolean
 }>()
 
@@ -25,6 +26,10 @@ const classes = computed(() => {
 
   if (props.size) {
     classList.push(`gamepad-button--size-${props.size}`)
+  }
+
+  if (props.clickable) {
+    classList.push('gamepad-button--clickable')
   }
 
   if (props.debug) {
