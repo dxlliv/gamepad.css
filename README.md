@@ -7,7 +7,7 @@ Or at least, all major consoles. Inspired by [PSone.css](https://github.com/mica
 [Demo](https://dxlliv.github.io/gamepad.css) - [Storybook](https://dxlliv.github.io/gamepad.css/stories)
 
 ### Storybook stories 
-- [CSS Gamepad Buttons for Nintendo Game Boy Color](https://dxlliv.github.io/gamepad.css/stories/?path=/docs/platform-nintendo-game-boy-color--docs)
+- [CSS Gamepad Buttons for Nintendo Game Boy](https://dxlliv.github.io/gamepad.css/stories/?path=/docs/platform-nintendo-game-boy-color--docs)
 - [CSS Gamepad Buttons for Nintendo Switch](https://dxlliv.github.io/gamepad.css/stories/?path=/docs/platform-nintendo-switch--docs)
 - [CSS Gamepad Buttons for Sony PlayStation 1](https://dxlliv.github.io/gamepad.css/stories/?path=/docs/platform-playstation-ps1--docs)
 - [CSS Gamepad Buttons for Sony PlayStation 2](https://dxlliv.github.io/gamepad.css/stories/?path=/docs/platform-playstation-ps2--docs)
