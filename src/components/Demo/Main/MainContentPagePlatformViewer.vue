@@ -13,9 +13,7 @@ function onGamepadButtonClick(e: any) {
   const elementHTML = e.target.closest('.gamepad-button-wrapper').outerHTML
   const buttonCode = formatCode(elementHTML)
 
-  if (viewerButtonStore.code === buttonCode) {
-    viewerButtonStore.setCode('')
-  } else {
+  if (viewerButtonStore.code !== buttonCode) {
     viewerButtonStore.setCode(formatCode(elementHTML))
   }
 }

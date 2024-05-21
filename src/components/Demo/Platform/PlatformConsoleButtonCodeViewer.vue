@@ -85,7 +85,7 @@ defineProps<{
     }
 
     :deep(code) {
-      padding: 0 32px 0 0 !important;
+      padding: 0 16px !important;
 
       ::-webkit-scrollbar {
         width: 0;
