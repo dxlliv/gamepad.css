@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-kK8iwK4x.js";import{M as i}from"./index-uBWKwC8x.js";import{u as n}from"./index-v-QJAo98.js";import"./iframe-61B7A14p.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function s(e){return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"gamepad.css"}),`
+import{j as t}from"./jsx-runtime-0UZ0tGOu.js";import{M as i}from"./index-y4rtqbt0.js";import{u as n}from"./index-wVWvdwiD.js";import"./iframe-svN4hMpw.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-5-cIlDoe.js";import"./index-ogXoivrg.js";import"./index-OpicemMp.js";import"./index-PPLHz8o0.js";function s(e){return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"gamepad.css"}),`
 `,t.jsx("div",{className:"sb-container",children:t.jsx("iframe",{src:"https://dxlliv.github.io/gamepad.css/"})}),`
 `,t.jsx("style",{children:`
     .sbdocs-wrapper {
