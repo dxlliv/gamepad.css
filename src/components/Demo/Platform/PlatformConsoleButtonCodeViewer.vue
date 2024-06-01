@@ -66,6 +66,10 @@ defineProps<{
     border-top: 1px solid var(--demo-border-color);
     text-align: left;
 
+    @media(max-width: 799px) {
+      grid-template-columns: 120px calc(100% - 120px);
+    }
+
     div {
       align-self: center;
 

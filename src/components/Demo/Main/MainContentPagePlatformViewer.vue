@@ -51,7 +51,13 @@ div.gamepad-platform-viewer {
   height: 100%;
 
   &--code-viewer {
-    max-height: 380px;
+    @media(min-width: 800px) {
+      max-height: 380px;
+    }
+
+    @media(max-width: 799px) {
+      padding-bottom: 120px;
+    }
   }
 
   section {
