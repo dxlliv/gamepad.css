@@ -70,6 +70,10 @@ nav {
   background: var(--demo-nav-color);
   border-right: 1px solid var(--demo-border-color);
 
+  @media(max-width: 799px) {
+    border-bottom: 1px solid var(--demo-border-color);
+  }
+
   ul {
     margin: 0;
     padding: 12px 0;

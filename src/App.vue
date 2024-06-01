@@ -50,11 +50,17 @@ main {
 
   border: 1px solid var(--demo-border-color);
   border-radius: 4px;
+  margin: 0 auto;
   margin-bottom: 16px;
+
+  @media(max-width: 799px) {
+    grid-template-columns: 100%;
+    max-height: inherit;
+  }
 
   div.license {
     position: absolute;
-    bottom: -44px;
+    bottom: -48px;
     left: 0;
     right: 0;
     text-align: center;
