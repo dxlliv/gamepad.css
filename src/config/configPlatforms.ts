@@ -11,7 +11,7 @@ export const configPlatforms: Platforms = {
                 },
             },
             gbc: {
-                name: 'Game Boy Color',
+                name: 'Game Boy',
                 buttons: {
                     list: ['a', 'b', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],
                     preview: ['a', 'b', 'arrow-up', 'arrow-down', 'arrow-left', 'arrow-right', 'select', 'start'],

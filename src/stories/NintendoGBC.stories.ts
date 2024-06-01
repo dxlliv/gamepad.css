@@ -2,7 +2,7 @@ import {configPlatforms} from "@/config/configPlatforms";
 import GamepadButton from "@/components/GamepadButton.vue";
 
 export default {
-  title: 'Platform/Nintendo/Game Boy Color',
+  title: 'Platform/Nintendo/Game Boy',
   component: GamepadButton,
   tags: ['autodocs'],
   args: {
